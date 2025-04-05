@@ -1,0 +1,163 @@
+@model List<UnitCategory>
+
+@{
+    ViewData["Title"] = "Unit Converter";
+    Layout = "_Layout";
+}
+
+<div class="main-container">
+    <h2>Unit <span>Converter</span></h2>
+    <nav class="navbar">
+        @foreach (var category in Model)
+        {
+            <button class="nav-item" data-index="@Model.IndexOf(category)"
+                    onclick="switchUnitCategory(@Model.IndexOf(category))">
+                @category.Name
+            </button>
+        }
+    </nav>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <td class="result" colspan="2" id="result"></td>
+                </tr>
+                <tr>
+                    <th><label for="from">From</label></th>
+                    <th><label for="to">To</label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" id="from" class="form-control" /></td>
+                    <td><input type="number" id="to" class="form-control" disabled /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="from-select" class="form-control" size="11"></select>
+                    </td>
+                    <td>
+                        <select id="to-select" class="form-control" size="11"></select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@await Html.PartialAsync("ConverterObj")
+
+
+@section Scripts {
+    <script>
+    let currentUnitCategory = 0;
+    const unitCategories = @Html.Raw(Json.Serialize(Model));
+
+    function switchUnitCategory(index) {
+        currentUnitCategory = index;
+        initializeUnitConverter();
+        
+        $('.nav-item').removeClass('nav-item-active');
+        $(`.nav-item[data-index="${index}"]`).addClass('nav-item-active');
+    }
+
+    function initializeUnitConverter() {
+        const category = unitCategories[currentUnitCategory];
+        $('#from-select, #to-select').empty();
+        
+        category.units.forEach((unit, i) => {
+            $('#from-select').append(`<option value="${i}">${unit.name}</option>`);
+            $('#to-select').append(`<option value="${i}">${unit.name}</option>`);
+        });
+        
+        $('#from-select').val(0);
+        $('#to-select').val(1);
+        
+        calculateUnit();
+    }
+
+    function calculateUnit() {
+        const fromValue = parseFloat($('#from').val());
+        const fromIndex = parseInt($('#from-select').val());
+        const toIndex = parseInt($('#to-select').val());
+        
+        if (isNaN(fromValue)) {
+            $('#to').val('');
+            $('#result').html('');
+            return;
+        }
+
+        $.post('@Url.Action("ConvertUnit", "UnitConverter")', {
+            categoryIndex: currentUnitCategory,
+            fromUnitIndex: fromIndex,
+            toUnitIndex: toIndex,
+            value: fromValue
+        }, function(data) {
+            const formattedResult = parseFloat(data.result.toFixed(6));
+            $('#to').val(formattedResult);
+            $('#result').html(`
+                <b>Result:</b> 
+                ${fromValue} ${$('#from-select option:selected').text()} = 
+                ${formattedResult} ${$('#to-select option:selected').text()}
+            `);
+        }).fail(function(error) {
+            console.error("Conversion failed:", error.responseText);
+        });
+    }
+
+
+
+    let currentObjectCategory = 0;
+    const objectCategories = @Html.Raw(Json.Serialize(ViewBag.ObjectCategories));
+
+    function switchObjectCategory(index) {
+        currentObjectCategory = index;
+        $('#objSelect option').each(function() {
+            const optionCategory = parseInt($(this).data('category'));
+            $(this).toggle(optionCategory === index);
+        });
+        $('#objSelect').val($('#objSelect option:visible').first().val());
+        updateObjectUnits();
+    }
+
+    function updateObjectUnits() {
+        const category = objectCategories[currentObjectCategory];
+        $('#objUnitSelect').empty();
+        category.units.forEach((unit, index) => {
+            $('#objUnitSelect').append(`<option value="${index}">${unit.name}</option>`);
+        });
+        calculateObject();
+    }
+
+    function calculateObject() {
+        const quantity = parseFloat($('#objQuantity').val()) || 0;
+        const objIndex = parseInt($('#objSelect').val());
+        const unitIndex = parseInt($('#objUnitSelect').val());
+        
+        $.post('@Url.Action("ConvertObject", "UnitConverter")', {
+            objectCategoryIndex: currentObjectCategory,
+            objectIndex: objIndex,
+            unitIndex: unitIndex,
+            quantity: quantity
+        }, function(data) {
+            const category = objectCategories[currentObjectCategory];
+            const obj = category.objects[objIndex];
+            const unit = category.units[unitIndex];
+            $('#objResult').html(`
+                ${quantity} ${obj.name} = 
+                ${data.result.toFixed(2)} ${unit.name}
+            `);
+        }).fail(function(error) {
+            console.error("Object conversion failed:", error.responseText);
+        });
+    }
+
+    $(document).ready(() => {
+        switchUnitCategory(0);
+        switchObjectCategory(0);
+        $('#from, #from-select, #to-select').on('input change', calculateUnit);
+        $('#objQuantity, #objSelect, #objUnitSelect').on('input change', calculateObject);
+    });
+    </script>
+
+}
