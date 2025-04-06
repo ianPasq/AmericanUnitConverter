@@ -1,36 +1,43 @@
 @model List<UnitCategory>
-
-
-<div class="object-converter">
-    <h2>Object Converter</h2>
-    <nav class="navbar">
-        @foreach (var category in ViewBag.ObjectCategories)
-        {
-            <button class="obj-nav-item" 
-                    data-index="@ViewBag.ObjectCategories.IndexOf(category)"
-                    onclick="switchObjectCategory(@ViewBag.ObjectCategories.IndexOf(category))">
-                @category.Name
-            </button>
-        }
-    </nav>
-    <div class="container">
-        <div class="input-group">
-            <input type="number" id="objQuantity" class="form-control" value="1" step="any">
-            <select id="objSelect" class="form-select">
+<div class="obj">
+    <section class="object-section">
+        <div class="object-converter">
+            <h2>Object Converter</h2>
+            <nav class="navbar">
                 @foreach (var category in ViewBag.ObjectCategories)
                 {
-                    @foreach (var obj in category.Objects)
-                    {
-                        <option value="@(category.Objects.IndexOf(obj))" 
-                                data-category="@ViewBag.ObjectCategories.IndexOf(category)">
-                            @obj.Name
-                        </option>
-                    }
+                    <button class="obj-nav-item" 
+                            data-index="@ViewBag.ObjectCategories.IndexOf(category)"
+                            onclick="switchObjectCategory(@ViewBag.ObjectCategories.IndexOf(category))">
+                        @category.Name
+                    </button>
                 }
-            </select>
-            <select id="objUnitSelect" class="form-select"></select>
+            </nav>
+            <div class="container">
+                <div class="input-group">
+                    <input type="number" id="objQuantity" class="form-control" value="1" step="any">
+                    <select id="objSelect" class="form-select">
+                        @foreach (var category in ViewBag.ObjectCategories)
+                        {
+                            @foreach (var obj in category.Objects)
+                            {
+                                <option value="@(category.Objects.IndexOf(obj))" 
+                                        data-category="@ViewBag.ObjectCategories.IndexOf(category)">
+                                    @obj.Name
+                                </option>
+                            }
+                        }
+                    </select>
+                    <select id="objUnitSelect" class="form-select"></select>
+                </div>
+                <div id="objResult" class="result"></div>
+            </div>
         </div>
-        <div id="objResult" class="result"></div>
-    </div>
-</div>
 
+        <div class="object-text">
+            <div>
+                <a> hello </a>
+            </div>
+        </div>
+    </section>
+</div>

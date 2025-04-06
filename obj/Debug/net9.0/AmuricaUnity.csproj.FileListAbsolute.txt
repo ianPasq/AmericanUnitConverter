@@ -105,3 +105,4 @@
 /home/tenebrae/AmuricaUnity/bin/Debug/net9.0/Newtonsoft.Json.Bson.dll
 /home/tenebrae/AmuricaUnity/obj/Debug/net9.0/AmuricaU.54C80330.Up2Date
 /home/tenebrae/AmuricaUnity/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/tenebrae/AmuricaUnity/obj/Debug/net9.0/AmuricaUnity.sourcelink.json

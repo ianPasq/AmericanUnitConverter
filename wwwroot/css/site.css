@@ -9,7 +9,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #728394;
+  box-shadow: 0 0 0 0.1rem rgb(248, 247, 247), 0 0 0 0.25rem #728394;
 }
 
 html {
@@ -26,7 +26,7 @@ body {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1.5rem;
-  background: #f8f9fa;
+  background: #a6a8aa;
   border-radius: 10px;
   box-shadow: 0 2px 15px rgba(173, 169, 169, 0.795);
 }
@@ -125,26 +125,57 @@ th {
 }
 
 
+.obj {
+  position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    background: #0b0c0c; 
+    padding: 15rem 0;
+    box-sizing: border-box;
+}
+
+
+.object-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
 
 .object-container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 2rem auto;
   padding: 1.5rem;
-  background: #f8f9fa;
+  background: #3e4444;
   border-radius: 10px;
   box-shadow: 0 2px 15px rgba(173, 169, 169, 0.795);
 }
 
 .object-converter {
-  background: #ffffff;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.object-text {
+  background: #f8f9fa;
+  padding: 1.5rem;
   border-radius: 8px;
-  padding: 20px;
-  margin-top: 30px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
 }
 
 .object-converter h3 {
-  color: #2c3e50;
+  color: #000000;
   margin-bottom: 20px;
 }
 
@@ -158,4 +189,36 @@ th {
   background: #e9ecef;
   border-radius: 5px;
   margin-top: 15px;
+}
+
+.obj-nav-item {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #e9ecef;
+  color: #575349;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.obj-nav-item:hover {
+  background: #885d00;
+  color: white;
+}
+
+.obj-nav-item-active {
+  background: #6e6e6e;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .object-section {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .object-text {
+    position: static;
+    order: -1;
+  }
 }
