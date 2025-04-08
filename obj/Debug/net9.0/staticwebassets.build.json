@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "c8++BVN1luxX5nQ0zXX/OznfC/hWR28e7asaaZiBQ+U=",
+  "Hash": "r+8XrG3ZvQviQIFJeMDLiqUNETA3N7WKUMeWC1uOjL4=",
   "Source": "AmuricaUnity",
   "BasePath": "_content/AmuricaUnity",
   "Mode": "Default",
@@ -955,8 +955,8 @@
       "RelatedAsset": "/home/tenebrae/AmuricaUnity/wwwroot/css/site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "3w7d0amhj6",
-      "Integrity": "zY6TdGVNYZu8Bh7rzNGSXy/jaVKaKAa7vyX8+Pf+3VQ=",
+      "Fingerprint": "129lp2iq6c",
+      "Integrity": "5z3zAXSO5Q6F/LDn/0qfWgdKwu/OQ7q1gJZbzpwRYIY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/tenebrae/AmuricaUnity/wwwroot/css/site.css"
@@ -1354,8 +1354,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7jwuya08o0",
-      "Integrity": "zTWek+cfhcqyddanUkQbvyTkpI7KOt46xec9POoKVB4=",
+      "Fingerprint": "g0ihhyjzvk",
+      "Integrity": "kCHW4lAgpD7UryfwORdEWUmjwCATXyHPthjwKVSSD24=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
@@ -2828,7 +2828,7 @@
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000945179584"
+          "Quality": "0.000943396226"
         }
       ],
       "ResponseHeaders": [
@@ -2838,15 +2838,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1057"
+          "Value": "1059"
         },
         {
           "Name": "ETag",
-          "Value": "\"zY6TdGVNYZu8Bh7rzNGSXy/jaVKaKAa7vyX8+Pf+3VQ=\""
+          "Value": "\"5z3zAXSO5Q6F/LDn/0qfWgdKwu/OQ7q1gJZbzpwRYIY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 21:49:41 GMT"
+          "Value": "Sun, 06 Apr 2025 16:47:26 GMT"
         },
         {
           "Name": "Content-Encoding",
@@ -2862,7 +2862,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"zTWek+cfhcqyddanUkQbvyTkpI7KOt46xec9POoKVB4=\""
+          "Value": "W/\"kCHW4lAgpD7UryfwORdEWUmjwCATXyHPthjwKVSSD24=\""
         }
       ],
       "EndpointProperties": []
@@ -2878,7 +2878,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3247"
+          "Value": "3523"
         },
         {
           "Name": "Content-Type",
@@ -2886,11 +2886,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zTWek+cfhcqyddanUkQbvyTkpI7KOt46xec9POoKVB4=\""
+          "Value": "\"kCHW4lAgpD7UryfwORdEWUmjwCATXyHPthjwKVSSD24=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 21:49:41 GMT"
+          "Value": "Sun, 06 Apr 2025 16:47:26 GMT"
         }
       ],
       "EndpointProperties": []
@@ -2906,7 +2906,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1057"
+          "Value": "1059"
         },
         {
           "Name": "Content-Type",
@@ -2914,11 +2914,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zY6TdGVNYZu8Bh7rzNGSXy/jaVKaKAa7vyX8+Pf+3VQ=\""
+          "Value": "\"5z3zAXSO5Q6F/LDn/0qfWgdKwu/OQ7q1gJZbzpwRYIY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 21:49:41 GMT"
+          "Value": "Sun, 06 Apr 2025 16:47:26 GMT"
         },
         {
           "Name": "Content-Encoding",

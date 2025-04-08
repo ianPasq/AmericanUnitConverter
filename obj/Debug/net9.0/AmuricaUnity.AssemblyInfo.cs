@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AmuricaUnity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14ee67c9b280b92378d5fb62317f62ea35a3db29")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbfe11b59e41017cdebd930d26afd96d50b46047")]
 [assembly: System.Reflection.AssemblyProductAttribute("AmuricaUnity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AmuricaUnity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
