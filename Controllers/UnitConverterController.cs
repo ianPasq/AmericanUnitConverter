@@ -69,6 +69,7 @@ public class UnitConverterController : Controller
                 Objects = new List<ObjectItem>
                 {
                     new ObjectItem { Name = "Banana", BaseValue = 0.17 }, 
+
                     new ObjectItem { Name = "Soda Can", BaseValue = 0.12 } 
                 }
             },
