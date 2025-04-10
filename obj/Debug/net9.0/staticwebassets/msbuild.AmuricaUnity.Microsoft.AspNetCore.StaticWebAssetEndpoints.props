@@ -10,7 +10,7 @@
       <AssetFile>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\site.css))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"3523"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022kCHW4lAgpD7UryfwORdEWUmjwCATXyHPthjwKVSSD24=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 16:47:26 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"3791"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022SrjTfxyBqNklJ4q8\u002B\u002Bpovt1OBSziPNXnm0bo7oBUfWo=\u0022"},{"Name":"Last-Modified","Value":"Wed, 09 Apr 2025 19:06:06 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AmuricaUnity/favicon.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico))</AssetFile>

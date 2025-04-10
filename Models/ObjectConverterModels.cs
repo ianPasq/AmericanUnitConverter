@@ -18,6 +18,6 @@ namespace AmuricaUnity.Models
     {
         public string Name { get; set; } = string.Empty;
         public double BaseValue { get; set; } 
-        
+        public string Description { get; set; } = string.Empty;
     }
 }

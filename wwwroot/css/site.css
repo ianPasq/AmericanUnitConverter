@@ -222,3 +222,21 @@ th {
     order: -1;
   }
 }
+
+.dynamic-text {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+  transition: all 0.3s ease;
+}
+
+.dynamic-text h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.dynamic-text p {
+  line-height: 1.6;
+  color: #495057;
+}

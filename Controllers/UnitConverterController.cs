@@ -68,9 +68,9 @@ public class UnitConverterController : Controller
                 },
                 Objects = new List<ObjectItem>
                 {
-                    new ObjectItem { Name = "Banana", BaseValue = 0.17 }, 
+                    new ObjectItem { Name = "Banana", BaseValue = 0.17, Description = "Average banana length: ~17cm. Did you know? The longest banana ever recorded was 1.3 meters!" }, 
 
-                    new ObjectItem { Name = "Soda Can", BaseValue = 0.12 } 
+                    new ObjectItem { Name = "Soda Can", BaseValue = 0.12, Description = "Standard soda can height: 12cm. Fun fact: Stacked vertically, 83 cans make a 10m tower!" } 
                 }
             },
             new ObjectCategory
